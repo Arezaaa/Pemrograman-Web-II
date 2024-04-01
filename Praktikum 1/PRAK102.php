@@ -8,5 +8,5 @@
 $luas = ($tinggi/2)*$sisi;
 $volume = $luas*$tinggi;
 
-echo "$volume m3"
+echo number_format($volume,3)."m3"
 ?>
