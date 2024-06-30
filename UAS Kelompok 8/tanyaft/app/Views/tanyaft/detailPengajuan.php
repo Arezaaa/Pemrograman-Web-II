@@ -14,46 +14,45 @@
         </div>    
     </header>
     <section class="d-flex flex-column">
-        <div class="d-flex flex-row">
-            <div class="flex-grow-1 me-3">
-                <label class="fw-bold" for="nama">ID Pengajuan</label> 
-                <input class="form-control mb-4 bg-body-secondary" type="text" name="id_pengajuan" placeholder="" value="<?= $pengajuan["id"] ?>" disabled>
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <label class="fw-bold" for="id_pengajuan">ID Pengajuan</label> 
+                <input class="form-control bg-body-secondary" type="text" name="id_pengajuan" value="<?= $pengajuan["id"] ?>" disabled>
             </div>
-            <div>
-                <label class="fw-bold" for="status_pengajuan">Status Pengajuan</label> 
+            <div class="col-md-6">
+                <label class="fw-bold" for="status_pengajuan">Status Pengajuan</label><br> 
                 <p class="badge bg-success-subtle text-success">Disetujui</p>
             </div> 
         </div>
-        <div class="d-flex flex-row">
-            <div class="flex-grow-1 me-3">
+        <div class="row mb-4">
+            <div class="col-md-6">
                 <label class="fw-bold" for="tgl_pengajuan">Tanggal Pengajuan</label> 
-                <input class="form-control mb-4 bg-body-secondary" type="text" name="tgl_pengajuan" placeholder="" value="<?= $pengajuan["created_at"] ?>" disabled>
+                <input class="form-control bg-body-secondary" type="text" name="tgl_pengajuan" value="<?= $pengajuan["created_at"] ?>" disabled>
             </div>
-            <div class="flex-grow-1">
+            <div class="col-md-6">
                 <label class="fw-bold" for="nama_lengkap">Nama Lengkap</label> 
-                <input class="form-control mb-4 bg-body-secondary" type="text" name="nama_lengkap" placeholder="" value="<?= $pengajuan["nama"] ?>" disabled>
+                <input class="form-control bg-body-secondary" type="text" name="nama_lengkap" value="<?= $pengajuan["nama"] ?>" disabled>
             </div>
         </div>
-        <div class="d-flex flex-row">
-            <div class="flex-grow-1 me-3">
+        <div class="row mb-4">
+            <div class="col-md-6">
                 <label class="fw-bold" for="nim">NIM</label> 
-                <input class="form-control mb-4 bg-body-secondary" type="text" name="nim" placeholder="" value="2210817110001" disabled>
+                <input class="form-control bg-body-secondary" type="text" name="nim" value="2210817110001" disabled>
             </div>
-            <div class="flex-grow-1">
+            <div class="col-md-6">
                 <label class="fw-bold" for="program_studi">Program Studi</label> 
-                <input class="form-control mb-4 bg-body-secondary" type="text" name="program_studi" placeholder="" value="Teknologi Informasi" disabled>
+                <input class="form-control bg-body-secondary" type="text" name="program_studi" value="Teknologi Informasi" disabled>
             </div>
         </div>
-        <div class="d-flex flex-row">
-            <div class="flex-grow-1 me-3">
+        <div class="row mb-4">
+            <div class="col-md-6">
                 <label class="fw-bold" for="pertanyaan">Pertanyaan</label> 
-                <input class="form-control mb-4 bg-body-secondary" type="text" name="pertanyaan" placeholder="" value="<?= $pengajuan["pertanyaan"] ?>" disabled>
+                <input class="form-control bg-body-secondary" type="text" name="pertanyaan" value="<?= $pengajuan["pertanyaan"] ?>" disabled>
             </div>
-            <div class="flex-grow-1">
+            <div class="col-md-6">
                 <label class="fw-bold" for="berkas_pendukung">Berkas Pendukung</label>
-                <a href="<?= base_url('') ?>" class="form-control mb-4 bg-body-secondary text-primary">Cek File</a>
+                <a href="<?= base_url('') ?>" class="form-control bg-body-secondary text-primary">Cek File</a>
             </div>
-
         </div>
     </section>
 </div>

@@ -28,29 +28,32 @@
         <?php endif; ?>
         <form action="<?= base_url('/pengajuan/submit') ?>" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
             <div class="mb-3">
-                <label for="nama" class="form-label fw-bold">Nama Lengkap <span class="text-danger">*</span></label>
+                <label for="nama" class="form-label fw-bold">Nama Lengkap <span id="username-asterisk" class="required-asterisk">*</span></label>
                 <input type="text" class="form-control bg-body-secondary" id="nama" name="nama" placeholder="" required>
                 <div class="invalid-feedback">
                     Nama lengkap harus diisi.
                 </div>
             </div>
             <div class="mb-3">
-                <label for="nim" class="form-label fw-bold">NIM <span class="text-danger">*</span></label>
+                <label for="nim" class="form-label fw-bold">NIM <span id="nim-asterisk" class="required-asterisk">*</span></label>
                 <input type="text" class="form-control bg-body-secondary" id="nim" name="nim" placeholder="" required>
                 <div class="invalid-feedback">
                     NIM harus diisi.
                 </div>
             </div>
             <div class="mb-3">
-                <label for="program_studi" class="form-label fw-bold">Program Studi <span class="text-danger">*</span></label>
-                <input type="text" class="form-control bg-body-secondary" id="program_studi" name="program_studi" placeholder="" required>
+                <label for="program_studi" class="form-label fw-bold">Program Studi <span id="prodi-asterisk" class="required-asterisk">*</span></label>
+                <select class="form-select bg-body-secondary" id="program_studi" name="program_studi" required>
+                    <option value="" disabled selected>Pilih Program Studi</option>
+                    <option value="Teknologi Informasi">Teknologi Informasi</option>
+                </select>
                 <div class="invalid-feedback">
                     Program studi harus diisi.
                 </div>
             </div>
 
             <div class="mb-3">
-                <label for="pertanyaan" class="form-label fw-bold">Pertanyaan <span class="text-danger">*</span></label>
+                <label for="pertanyaan" class="form-label fw-bold">Pertanyaan <span id="pertanyaan-asterisk" class="required-asterisk">*</span></label>
                 <textarea class="form-control" id="pertanyaan" name="pertanyaan" rows="7" placeholder="Masukkan pertanyaan" required></textarea>
                 <div class="invalid-feedback">
                     Pertanyaan harus diisi.
@@ -75,5 +78,34 @@
         </form>
     </section>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const fields = [
+            {input: 'nama', asterisk: 'username-asterisk'},
+            {input: 'nim', asterisk: 'nim-asterisk'},
+            {input: 'program_studi', asterisk: 'prodi-asterisk'},
+            {input: 'pertanyaan', asterisk: 'pertanyaan-asterisk'},
+        ];
+
+        fields.forEach(field => {
+            const inputElement = document.getElementById(field.input);
+            const asteriskElement = document.getElementById(field.asterisk);
+
+            inputElement.addEventListener('input', function() {
+                if (inputElement.value.trim() === '') {
+                    asteriskElement.classList.remove('hidden');
+                } else {
+                    asteriskElement.classList.add('hidden');
+                }
+            });
+
+            // Initial check in case the field is pre-filled
+            if (inputElement.value.trim() !== '') {
+                asteriskElement.classList.add('hidden');
+            }
+        });
+    });
+</script>
 
 <?= $this->endSection() ?>

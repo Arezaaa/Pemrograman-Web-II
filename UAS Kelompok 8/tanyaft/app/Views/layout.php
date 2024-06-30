@@ -35,7 +35,6 @@
         .main-content {
             height: 100vh; /* Full height of viewport */
             overflow-y: auto; /* Enable vertical scrolling */
-            background-color: #f8f9fa; /* Optional: Adjust sidebar background */
         }
 
         .sidebar .nav-link:hover {
@@ -51,6 +50,13 @@
         .custom-orange-bg {
             background-color: rgba(255, 239, 213, 0.5);
             color: #000;
+        }
+        .required-asterisk {
+        color: red;
+        display: inline;
+        }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
