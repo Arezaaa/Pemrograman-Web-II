@@ -21,7 +21,7 @@ class TanyaFT extends BaseController
         $data['pengajuan'] = $this->pengajuanModel->findAll();
         return view('tanyaft/main', $data);
     }
-
+    
     public function pengajuan()
     {
         return view('tanyaft/pengajuan');
