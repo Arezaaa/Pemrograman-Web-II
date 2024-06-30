@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-light-subtle sticky-top shadow-sm">
     <div class="container-fluid">
         <img src="<?= base_url('images/logo_ulm.png') ?>" class="m-2" alt="" style="width: 40px;">
         <div class="d-flex flex-column">

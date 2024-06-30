@@ -81,6 +81,6 @@ class TanyaFT extends BaseController
         ];
         $this->pengajuanModel->save($data);
 
-        return redirect()->to('/tanya-ft');
+        return redirect()->to('/tanyaft');
     }
 }

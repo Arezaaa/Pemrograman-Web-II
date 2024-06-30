@@ -29,25 +29,26 @@
         <form action="<?= base_url('/pengajuan/submit') ?>" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
             <div class="mb-3">
                 <label for="nama" class="form-label fw-bold">Nama Lengkap <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="nama" name="nama" placeholder="" required>
+                <input type="text" class="form-control bg-body-secondary" id="nama" name="nama" placeholder="" required>
                 <div class="invalid-feedback">
                     Nama lengkap harus diisi.
                 </div>
             </div>
             <div class="mb-3">
                 <label for="nim" class="form-label fw-bold">NIM <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="nim" name="nim" placeholder="" required>
+                <input type="text" class="form-control bg-body-secondary" id="nim" name="nim" placeholder="" required>
                 <div class="invalid-feedback">
                     NIM harus diisi.
                 </div>
             </div>
             <div class="mb-3">
                 <label for="program_studi" class="form-label fw-bold">Program Studi <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="program_studi" name="program_studi" placeholder="" required>
+                <input type="text" class="form-control bg-body-secondary" id="program_studi" name="program_studi" placeholder="" required>
                 <div class="invalid-feedback">
                     Program studi harus diisi.
                 </div>
             </div>
+
             <div class="mb-3">
                 <label for="pertanyaan" class="form-label fw-bold">Pertanyaan <span class="text-danger">*</span></label>
                 <textarea class="form-control" id="pertanyaan" name="pertanyaan" rows="7" placeholder="Masukkan pertanyaan" required></textarea>

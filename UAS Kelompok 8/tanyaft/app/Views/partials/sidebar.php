@@ -1,6 +1,6 @@
 <!-- Sidebar -->
-<div class="d-flex">
-    <nav class="sidebar p-3 mt-5 w-auto">
+<div class="d-flex bg-light-subtle">
+    <nav class="sidebar p-3 mt-5 w-auto bg-light-subtle">
         <h6 class="text-secondary text-start ps-3">Menu</h6>
         <ul class="nav flex-column">
             <li class="nav-item">
