@@ -41,7 +41,7 @@
         <div class="col mb-3">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <h3 class="card-title text-info fw-bold">4</h3>
+                    <h3 class="card-title text-info fw-bold">3</h3>
                     <p class="card-text text-secondary">Layanan diajukan</p>
                 </div>
             </div>
@@ -49,7 +49,7 @@
         <div class="col mb-3">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <h3 class="card-title text-info fw-bold">2</h3>
+                    <h3 class="card-title text-info fw-bold">1</h3>
                     <p class="card-text text-secondary">Menunggu persetujuan</p>
                 </div>
             </div>
