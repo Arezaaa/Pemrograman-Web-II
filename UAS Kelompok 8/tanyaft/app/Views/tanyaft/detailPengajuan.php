@@ -37,7 +37,7 @@
         <div class="row mb-4">
             <div class="col-md-6">
                 <label class="fw-bold" for="nim">NIM</label> 
-                <input class="form-control bg-body-secondary" type="text" name="nim" value="2210817110001" disabled>
+                <input class="form-control bg-body-secondary" type="text" name="nim" value="<?= $pengajuan["nim"] ?>" disabled>
             </div>
             <div class="col-md-6">
                 <label class="fw-bold" for="program_studi">Program Studi</label> 
