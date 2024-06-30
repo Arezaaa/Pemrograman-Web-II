@@ -4,7 +4,7 @@
 
 <div class="card content flex-grow-1 p-3 shadow" style="margin-top: 100px;">
     <div class="d-flex flex-row align-items-center">
-        <img src="/img/arrow.png" style="width: 30px;" alt="">
+        <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/></svg>
         <a href="<?= base_url('/tanyaft') ?>" class="text-decoration-none"><h6 class="fw-bold m-0 ms-2" style="color: deepskyblue;">Kembali</h6></a>
     </div>
     <hr>
@@ -21,7 +21,7 @@
             </div>
             <div>
                 <label class="fw-bold" for="status_pengajuan">Status Pengajuan</label> 
-                <p class="approved-button">Disetujui</p>
+                <p class="badge bg-success-subtle text-success">Disetujui</p>
             </div> 
         </div>
         <div class="d-flex flex-row">
@@ -51,7 +51,7 @@
             </div>
             <div class="flex-grow-1">
                 <label class="fw-bold" for="berkas_pendukung">Berkas Pendukung</label>
-                <a href="<?= base_url('') ?>" class="form-control mb-4 bg-body-secondary">Cek File</a>
+                <a href="<?= base_url('') ?>" class="form-control mb-4 bg-body-secondary text-primary">Cek File</a>
             </div>
 
         </div>
