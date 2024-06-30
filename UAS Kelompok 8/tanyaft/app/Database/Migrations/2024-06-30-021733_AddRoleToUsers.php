@@ -5,7 +5,7 @@ namespace App\Database\Migrations;
 use CodeIgniter\Database\Forge;
 use CodeIgniter\Database\Migration;
 
-class AddMobileNumberToUsers extends Migration
+class AddRoleToUsers extends Migration
 {
     /**
      * @var string[]
