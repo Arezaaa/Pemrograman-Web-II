@@ -22,12 +22,12 @@ class Pengajuan extends Migration
             ],
             'nim' => [
                 'type' => 'int',
-                'constraint' => 20,
+                'constraint' => 50,
                 'null' => FALSE,
             ],
             'program_studi' => [
                 'type' => 'VARCHAR',
-                'constraint' => 50,
+                'constraint' => '50',
                 'null' => FALSE,
             ],
             'pertanyaan' => [

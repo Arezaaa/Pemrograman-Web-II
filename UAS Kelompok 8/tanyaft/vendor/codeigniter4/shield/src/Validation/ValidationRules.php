@@ -59,12 +59,6 @@ class ValidationRules
             $this->tables['users']
         );
 
-        $roleRules            = $this->config->roleValidationRules;
-        $roleRules['rules'][] = sprintf(
-            'is_unique[%s.role]',
-            $this->tables['users']
-        );
-
         $passwordRules            = $this->getPasswordRules();
         $passwordRules['rules'][] = 'strong_password[]';
 
@@ -72,7 +66,6 @@ class ValidationRules
             'username'         => $usernameRules,
             'email'            => $emailRules,
             'mobile_number'    => $mobile_numberRules,
-            'role'             => $roleRules,
             'password'         => $passwordRules,
             'password_confirm' => $this->getPasswordConfirmRules(),
         ];

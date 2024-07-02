@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="program_studi" class="form-label fw-bold">Program Studi <span id="prodi-asterisk" class="required-asterisk">*</span></label>
+                <label for="program_studi" class="form-label fw-bold">Program Studi <span id="program_studi-asterisk" class="required-asterisk">*</span></label>
                 <select class="form-select bg-body-secondary" id="program_studi" name="program_studi" required>
                     <option value="" disabled selected>Pilih Program Studi</option>
                     <option value="Teknologi Informasi">Teknologi Informasi</option>
@@ -62,8 +62,8 @@
             <div class="mb-3">
                 <label class="form-label fw-bold d-block">Berkas Pendukung</label>
                 <div class="input-group">
-                    <input type="file" class="form-control" id="fileInput" name="berkas_pendukung" accept=".jpg,.jpeg,.png" onchange="updateFileName()" required>
-                    <button class="btn btn-info text-white" type="button" onclick="document.getElementById('fileInput').click();">Choose File</button>
+                    <input type="file" class="form-control" id="bukti_dukung" name="bukti_dukung" accept=".jpg,.jpeg,.png" onchange="updateFileName()" required>
+                    <button class="btn btn-info text-white" type="button" onclick="document.getElementById('bukti_dukung').click();">Choose File</button>
                 </div>
                 <div class="invalid-feedback">
                     Berkas pendukung harus diunggah (format: jpg, jpeg, png).
@@ -84,7 +84,7 @@
         const fields = [
             {input: 'nama', asterisk: 'username-asterisk'},
             {input: 'nim', asterisk: 'nim-asterisk'},
-            {input: 'program_studi', asterisk: 'prodi-asterisk'},
+            {input: 'program_studi', asterisk: 'program_studi-asterisk'},
             {input: 'pertanyaan', asterisk: 'pertanyaan-asterisk'},
         ];
 

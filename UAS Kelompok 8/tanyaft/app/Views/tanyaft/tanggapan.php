@@ -22,7 +22,7 @@
                <div class="d-flex flex-row">
                 <div style="margin-right: 130px;">
                 </div>
-                <a href="<?= base_url('') ?>" class="form-control mb-4 bg-body-secondary text-primary">Cek File</a>
+                <a href="<?= base_url($pengajuan['bukti_dukung']) ?>" class="form-control mb-4 bg-body-secondary text-primary">Cek File</a>
                </div>
                <div class="d-flex flex-row">
                     <p>Jawaban </p>

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\QuestionModel;
+use App\Models\PengajuanModel;
 use CodeIgniter\Shield\Models\UserModel; // Import UserModel from Shield
 
 class TanyaFT extends BaseController
@@ -12,7 +12,7 @@ class TanyaFT extends BaseController
 
     public function __construct()
     {
-        $this->pengajuanModel = new QuestionModel();
+        $this->pengajuanModel = new PengajuanModel();
         $this->userModel = new UserModel();
     }
 
@@ -66,21 +66,40 @@ class TanyaFT extends BaseController
             return redirect()->back()->withInput()->with('errors', $validation->getErrors());
         }
 
-        // Handle file upload
-        $file = $this->request->getFile('berkas_pendukung');
-        $fileName = $file->getClientName();
-        $file->move(WRITEPATH . 'uploads', $fileName);
+// Function to sanitize file names
+function sanitizeFileName($fileName) {
+    // Replace spaces and disallowed characters with underscores
+    return preg_replace('/[^a-zA-Z0-9\-_\.]/', '_', $fileName);
+}
 
-        // Simpan data ke database
+    // Handle file upload
+    $file = $this->request->getFile('bukti_dukung');
+    if ($file->isValid() && !$file->hasMoved()) {
+        // Get the original name and sanitize it
+        $originalName = $file->getClientName();
+        $sanitizedFileName = sanitizeFileName($originalName);
+
+        // Move the file to the public/uploads directory with the sanitized name
+        $file->move(FCPATH . 'uploads', $sanitizedFileName);
+
+        // Save data to the database with the relative file path
         $data = [
             'nama' => $this->request->getPost('nama'),
             'nim' => $this->request->getPost('nim'),
             'program_studi' => $this->request->getPost('program_studi'),
             'pertanyaan' => $this->request->getPost('pertanyaan'),
-            'berkas_pendukung' => $fileName,
+            'bukti_dukung' => 'uploads/' . $sanitizedFileName, // Save the relative path
         ];
-        $this->pengajuanModel->save($data);
 
-        return redirect()->to('/tanyaft');
+        // Assume you have a model called 'PengajuanModel' to handle database operations
+        $this->pengajuanModel->insert($data);
+
+        // Provide feedback to the user
+        return redirect()->to('/tanyaft')->with('message', 'File uploaded successfully');
+    } else {
+        // Handle the error
+        return redirect()->back()->with('error', 'File upload failed');
+    }
+
     }
 }

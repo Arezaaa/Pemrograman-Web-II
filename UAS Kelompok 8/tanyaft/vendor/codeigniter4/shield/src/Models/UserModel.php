@@ -34,7 +34,6 @@ class UserModel extends BaseModel
     protected $allowedFields  = [
         'username',
         'mobile_number',
-        'role',
         'status',
         'status_message',
         'active',

@@ -37,11 +37,11 @@
         <div class="row mb-4">
             <div class="col-md-6">
                 <label class="fw-bold" for="nim">NIM</label> 
-                <input class="form-control bg-body-secondary" type="text" name="nim" value="2210817210016" disabled>
+                <input class="form-control bg-body-secondary" type="number" name="nim" value="<?= $pengajuan["nim"] ?>" disabled>
             </div>
             <div class="col-md-6">
                 <label class="fw-bold" for="program_studi">Program Studi</label> 
-                <input class="form-control bg-body-secondary" type="text" name="program_studi" value="Teknologi Informasi" disabled>
+                <input class="form-control bg-body-secondary" type="text" name="program_studi" value="<?= $pengajuan["program_studi"] ?>" disabled>
             </div>
         </div>
         <div class="row mb-4">
@@ -50,9 +50,10 @@
                 <input class="form-control bg-body-secondary" type="text" name="pertanyaan" value="<?= $pengajuan["pertanyaan"] ?>" disabled>
             </div>
             <div class="col-md-6">
-                <label class="fw-bold" for="berkas_pendukung">Berkas Pendukung</label>
-                <a href="<?= base_url('') ?>" class="form-control bg-body-secondary text-primary">Cek File</a>
-            </div>
+    <label class="fw-bold" for="bukti_dukung">Berkas Pendukung</label>
+        <a href="<?= base_url($pengajuan['bukti_dukung']) ?>" class="form-control bg-body-secondary text-primary">Cek File</a>
+    </div>
+
         </div>
     </section>
 </div>

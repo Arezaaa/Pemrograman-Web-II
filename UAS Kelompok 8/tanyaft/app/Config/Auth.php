@@ -229,25 +229,6 @@ class Auth extends ShieldAuth
 
     /**
      * --------------------------------------------------------------------
-     * The validation rules for role
-     * --------------------------------------------------------------------
-     *
-     * Do not use string rules like `required|valid_email`.
-     *
-     * @var array<string, array<int, string>|string>
-     */
-    public array $roleValidationRules = [
-        'label' => 'Auth.role',
-        'rules' => [
-            'required',
-            'max_length[30]',
-            'min_length[3]',
-            'regex_match[/\A[a-zA-Z0-9\. ]+\z/]',
-        ],
-    ];
-
-    /**
-     * --------------------------------------------------------------------
      * The validation rules for mobile_number
      * --------------------------------------------------------------------
      *

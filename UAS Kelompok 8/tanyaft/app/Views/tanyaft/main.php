@@ -48,10 +48,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php if (empty($pengajuan)) : ?>
+                    <tr>
+                        <td colspan="6" class="text-center text-secondary">Belum Ada Pengajuan</td>
+                    </tr>
+                <?php else : ?>
                     <?php foreach ($pengajuan as $index => $item) : ?>
                         <tr>
                             <td><?= $index + 1 ?></td>
-                            <td><?= $item['id'] ?></td>
+                            <td>TY-<?= $item['id'] ?></td>
                             <td>Tanya FT</td>
                             <td><?= $item['created_at'] ?></td>
                             <td><span class="badge bg-success-subtle text-success">Disetujui</span></td>
@@ -65,6 +70,7 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <?php endif; ?>
         </section>
     </div>
 

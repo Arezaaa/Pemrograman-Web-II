@@ -10,7 +10,6 @@ $routes->get('/', 'Home::index');
 $routes->get('/eresponse', 'Home::eresponse');
 $routes->get('/dashboard', 'Home::index');
 $routes->get('/tanyaft', 'TanyaFT::main');
-$routes->get('/tanyaft', 'TanyaFT::index');
 $routes->get('/pengajuan/tambah','TanyaFT::pengajuan');
 $routes->get('/pengajuan/tanggapan/(:any)','TanyaFT::tanggapan/$1');
 $routes->get('/pengajuan/detailPengajuan/(:any)','TanyaFT::detailPengajuan/$1');
